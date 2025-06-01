@@ -1,0 +1,23 @@
+(executable
+ (name content)
+ (libraries 
+   brr
+   note
+   note.brr
+
+   operators
+   services_impl
+   js_handler
+   brr_string
+   )
+ (modes js)
+ (preprocess (pps js_of_ocaml-ppx))
+ (link_flags (:standard -no-check-prims))
+ (js_of_ocaml (flags :standard --opt 3 --target-env browser --disable genprim --disable debugger))
+ )
+
+(rule
+  (targets content.js)
+  (deps content.bc.js)
+  (action (copy %{deps} %{targets})))
+

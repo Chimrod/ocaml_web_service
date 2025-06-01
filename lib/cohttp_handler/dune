@@ -1,0 +1,15 @@
+(library
+ (name cohttp_handler)
+ (libraries 
+   uri
+   cohttp
+   cohttp-lwt
+   cohttp-lwt-unix
+
+   operators
+   v_string
+   path
+   services
+   )
+ (preprocess (pps ppx_yojson_conv lwt_ppx))
+ )

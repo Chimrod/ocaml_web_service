@@ -1,0 +1,4 @@
+(library
+ (name brr_string)
+ (libraries brr)
+ (implements v_string))

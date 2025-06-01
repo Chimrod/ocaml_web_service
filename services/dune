@@ -1,0 +1,10 @@
+(library
+ (name services_impl)
+ (libraries 
+   path
+   services
+   v_string
+   )
+ (preprocess (pps ppx_yojson_conv))
+ )
+

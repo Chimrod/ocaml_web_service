@@ -1,0 +1,4 @@
+(library
+ (name v_string)
+ (virtual_modules v_string)
+ (default_implementation dream_string))

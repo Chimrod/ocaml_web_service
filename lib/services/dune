@@ -1,0 +1,10 @@
+(library
+ (name services)
+
+ (libraries  
+   lwt 
+   yojson 
+   path)
+ (preprocess (pps ppx_yojson_conv))
+ )
+

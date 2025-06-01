@@ -1,0 +1,11 @@
+(library
+ (name js_handler)
+ (libraries 
+   brr
+   yojson
+   v_string
+   path
+   services
+   )
+ (preprocess (pps ppx_yojson_conv lwt_ppx))
+ )

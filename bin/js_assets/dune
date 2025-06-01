@@ -1,0 +1,3 @@
+; Copy the files generated with js_of_ocaml into this directory.
+; We have to explicitaly name the targets we want to include here.
+(copy_files ../../js/content.js)

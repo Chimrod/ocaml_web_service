@@ -1,0 +1,22 @@
+(executables
+ (public_names dream_service client)
+ (names main client)
+ (libraries 
+   lwt
+   lwt.unix
+   dream
+   dream_handler
+   cohttp_handler
+   uri
+   services
+   services_impl
+   )
+ )
+
+
+(rule
+ (target jsAssets.ml)
+ (deps (glob_files js_assets/**))
+ (action (with-stdout-to %{null}
+  (run ocaml-crunch -m plain js_assets/ -o %{target}))))
+

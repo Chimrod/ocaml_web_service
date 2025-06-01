@@ -1,0 +1,4 @@
+(library
+ (name dream_string)
+ (libraries dream)
+ (implements v_string))

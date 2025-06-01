@@ -1,0 +1,13 @@
+(library
+ (name dream_handler)
+
+ (libraries 
+   lwt 
+   dream 
+   result
+   yojson
+   path
+   services)
+ (preprocess (pps ppx_yojson_conv lwt_ppx))
+ )
+
